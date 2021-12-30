@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="DataSetlogins" targetNamespace="http://tempuri.org/DataSetlogins.xsd" xmlns:mstns="http://tempuri.org/DataSetlogins.xsd" xmlns="http://tempuri.org/DataSetlogins.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="DataSetlogins" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="DataSetlogins" msprop:Generator_UserDSName="DataSetlogins">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="DataTable1" msprop:Generator_TableClassName="DataTable1DataTable" msprop:Generator_TableVarName="tableDataTable1" msprop:Generator_TablePropName="DataTable1" msprop:Generator_RowDeletingName="DataTable1RowDeleting" msprop:Generator_RowChangingName="DataTable1RowChanging" msprop:Generator_RowEvHandlerName="DataTable1RowChangeEventHandler" msprop:Generator_RowDeletedName="DataTable1RowDeleted" msprop:Generator_UserTableName="DataTable1" msprop:Generator_RowChangedName="DataTable1RowChanged" msprop:Generator_RowEvArgName="DataTable1RowChangeEvent" msprop:Generator_RowClassName="DataTable1Row">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="DatsColuID" msprop:Generator_ColumnVarNameInTable="columnDatsColuID" msprop:Generator_ColumnPropNameInRow="DatsColuID" msprop:Generator_ColumnPropNameInTable="DatsColuIDColumn" msprop:Generator_UserColumnName="DatsColuID" type="xs:string" minOccurs="0" />
+              <xs:element name="DatasetcolumNombre" msprop:Generator_ColumnVarNameInTable="columnDatasetcolumNombre" msprop:Generator_ColumnPropNameInRow="DatasetcolumNombre" msprop:Generator_ColumnPropNameInTable="DatasetcolumNombreColumn" msprop:Generator_UserColumnName="DatasetcolumNombre" type="xs:string" minOccurs="0" />
+              <xs:element name="DataColuPuesto" msprop:Generator_ColumnVarNameInTable="columnDataColuPuesto" msprop:Generator_ColumnPropNameInRow="DataColuPuesto" msprop:Generator_ColumnPropNameInTable="DataColuPuestoColumn" msprop:Generator_UserColumnName="DataColuPuesto" type="xs:string" minOccurs="0" />
+              <xs:element name="DataColuFecha" msprop:Generator_ColumnVarNameInTable="columnDataColuFecha" msprop:Generator_ColumnPropNameInRow="DataColuFecha" msprop:Generator_ColumnPropNameInTable="DataColuFechaColumn" msprop:Generator_UserColumnName="DataColuFecha" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

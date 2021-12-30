@@ -1,0 +1,677 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{C8B2C94A-E363-4C4F-9470-FB3A08E65DA0}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Joyeria2._0</RootNamespace>
+    <AssemblyName>Joyeria2.0</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="BarcodeLib, Version=1.3.0.0, Culture=neutral, PublicKeyToken=5f09bda868cc39e7, processorArchitecture=MSIL">
+      <HintPath>..\packages\BarcodeLib.1.3.0.0\lib\net20\BarcodeLib.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.Core, Version=1.8.0.1, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9" />
+    <Reference Include="Bunifu.UI.WinForm.BunifuShadowPanel">
+      <HintPath>..\..\..\..\..\Bunifu UI WinForms 1.8.0.1\Bunifu UI WinForms 1.8.0.1\Bunifu.UI.WinForm.BunifuShadowPanel.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuButton">
+      <HintPath>..\..\..\..\..\Bunifu UI WinForms 1.8.0.1\Bunifu UI WinForms 1.8.0.1\Bunifu.UI.WinForms.BunifuButton.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuDatePicker">
+      <HintPath>..\..\..\..\..\Bunifu UI WinForms 1.8.0.1\Bunifu UI WinForms 1.8.0.1\Bunifu.UI.WinForms.BunifuDatePicker.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuDropdown">
+      <HintPath>..\..\..\..\..\..\Downloads\Bunifu_UI_WinForms_1.7.0.0_Downloadly.ir\Bunifu UI WinForms 1.7.0.0\Bunifu UI WinForms 1.7.0.0\Bunifu.UI.WinForms.BunifuDropdown.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuImageButton">
+      <HintPath>..\..\..\..\..\Bunifu UI WinForms 1.8.0.1\Bunifu UI WinForms 1.8.0.1\Bunifu.UI.WinForms.BunifuImageButton.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuLabel">
+      <HintPath>..\..\..\..\..\Bunifu UI WinForms 1.8.0.1\Bunifu UI WinForms 1.8.0.1\Bunifu.UI.WinForms.BunifuLabel.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuPictureBox">
+      <HintPath>..\..\..\..\..\Bunifu UI WinForms 1.8.0.1\Bunifu UI WinForms 1.8.0.1\Bunifu.UI.WinForms.BunifuPictureBox.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuRadioButton">
+      <HintPath>..\..\..\..\..\Bunifu UI WinForms 1.8.0.1\Bunifu UI WinForms 1.8.0.1\Bunifu.UI.WinForms.BunifuRadioButton.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuTextbox">
+      <HintPath>..\..\..\..\..\Bunifu UI WinForms 1.8.0.1\Bunifu UI WinForms 1.8.0.1\Bunifu.UI.WinForms.BunifuTextbox.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuTransition">
+      <HintPath>..\..\..\..\..\..\Downloads\Bunifu_UI_WinForms_1.7.0.0_Downloadly.ir\Bunifu UI WinForms 1.7.0.0\Bunifu UI WinForms 1.7.0.0\Bunifu.UI.WinForms.BunifuTransition.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu_UI_v1.5.3">
+      <HintPath>..\..\..\..\..\Bunifu UI WinForms 1.8.0.1\Bunifu UI WinForms 1.8.0.1\Bunifu_UI_v1.5.3.dll</HintPath>
+    </Reference>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.CodeParser.v18.1, Version=18.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Data.v18.1, Version=18.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.DataAccess.v18.1, Version=18.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Diagram.v18.1.Core, Version=18.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Office.v18.1.Core, Version=18.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Printing.v18.1.Core, Version=18.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.RichEdit.v18.1.Core, Version=18.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Utils.v18.1, Version=18.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Xpo.v18.1, Version=18.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraBars.v18.1, Version=18.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraDiagram.v18.1, Version=18.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraEditors.v18.1, Version=18.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraGrid.v18.1, Version=18.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraLayout.v18.1, Version=18.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraPrinting.v18.1, Version=18.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraScheduler.v18.1, Version=18.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraScheduler.v18.1.Core, Version=18.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraVerticalGrid.v18.1, Version=18.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="FlashControlV71, Version=1.0.3187.32366, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="MetroFramework, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
+      <HintPath>..\packages\MetroModernUI.1.4.0.0\lib\net\MetroFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="MetroFramework.Design, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
+      <HintPath>..\packages\MetroModernUI.1.4.0.0\lib\net\MetroFramework.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="MetroFramework.Fonts, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
+      <HintPath>..\packages\MetroModernUI.1.4.0.0\lib\net\MetroFramework.Fonts.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Owin.4.0.0\lib\net451\Microsoft.Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="Owin, Version=1.0.0.0, Culture=neutral, PublicKeyToken=f0ebd12fd5e55cc5, processorArchitecture=MSIL">
+      <HintPath>..\packages\Owin.1.0\lib\net40\Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="PresentationCore" />
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Runtime.Remoting" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Telerik.WinControls, Version=2018.3.911.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e" />
+    <Reference Include="Telerik.WinControls.Themes.Office2007Silver, Version=2018.3.1016.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e" />
+    <Reference Include="Telerik.WinControls.UI, Version=2018.3.911.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL" />
+    <Reference Include="TelerikCommon, Version=2018.3.911.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e" />
+    <Reference Include="UIAutomationClient" />
+    <Reference Include="WindowsBase" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CrystalReporempleados.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CrystalReporempleados.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CrystalReportapartado.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CrystalReportapartado.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CrystalReportclientes.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CrystalReportclientes.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CrystalReportproductos.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CrystalReportproductos.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CrystalReportventas.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CrystalReportventas.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="DataSetapartados.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSetapartados.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataSetclientes.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSetclientes.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DatasetEmpleados.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DatasetEmpleados.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="busqprod.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="busqprod.Designer.cs">
+      <DependentUpon>busqprod.cs</DependentUpon>
+    </Compile>
+    <Compile Include="classes\Clsencry.cs" />
+    <Compile Include="classes\clslogin.cs" />
+    <Compile Include="classes\clssutil.cs" />
+    <Compile Include="classes\clsempresa.cs" />
+    <Compile Include="classes\Conexion.cs" />
+    <Compile Include="Aadmin\Frmaddacceso.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Aadmin\Frmaddacceso.Designer.cs">
+      <DependentUpon>Frmaddacceso.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Aadmin\Frmaddclientes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Aadmin\Frmaddclientes.Designer.cs">
+      <DependentUpon>Frmaddclientes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Aadmin\frmaddempleado.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Aadmin\frmaddempleado.Designer.cs">
+      <DependentUpon>frmaddempleado.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Aadmin\Frmaddprod.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Aadmin\Frmaddprod.Designer.cs">
+      <DependentUpon>Frmaddprod.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Aadmin\frmadmin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Aadmin\frmadmin.Designer.cs">
+      <DependentUpon>frmadmin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Aadmin\Frmapartado.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Aadmin\Frmapartado.Designer.cs">
+      <DependentUpon>Frmapartado.cs</DependentUpon>
+    </Compile>
+    <Compile Include="cryreportlogins.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>cryreportlogins.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="DataSetlogins.cs">
+      <DependentUpon>DataSetlogins.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataSetlogins.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSetlogins.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataSetproduc.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSetproduc.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataSetventas.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSetventas.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="diagam.cs" />
+    <Compile Include="Frmapartaven.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frmapartaven.Designer.cs">
+      <DependentUpon>Frmapartaven.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Aadmin\FrmClientes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Aadmin\FrmClientes.Designer.cs">
+      <DependentUpon>FrmClientes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Aadmin\Frmconfig.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Aadmin\Frmconfig.Designer.cs">
+      <DependentUpon>Frmconfig.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Aadmin\Frmconfigss.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Aadmin\Frmconfigss.Designer.cs">
+      <DependentUpon>Frmconfigss.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Aadmin\FrmEmpleados.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Aadmin\FrmEmpleados.Designer.cs">
+      <DependentUpon>FrmEmpleados.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Frmbusquedas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frmbusquedas.Designer.cs">
+      <DependentUpon>Frmbusquedas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Frmclientevent.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frmclientevent.Designer.cs">
+      <DependentUpon>Frmclientevent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Frmcrysclientes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frmcrysclientes.Designer.cs">
+      <DependentUpon>Frmcrysclientes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmInfoventa.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmInfoventa.Designer.cs">
+      <DependentUpon>frmInfoventa.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmlogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmlogin.Designer.cs">
+      <DependentUpon>frmlogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Aadmin\frmproductos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Aadmin\frmproductos.Designer.cs">
+      <DependentUpon>frmproductos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Aadmin\Frmregistrologs.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Aadmin\Frmregistrologs.Designer.cs">
+      <DependentUpon>Frmregistrologs.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Aadmin\Frmreporteslogins.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Aadmin\Frmreporteslogins.Designer.cs">
+      <DependentUpon>Frmreporteslogins.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Frmreporempleadosss.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frmreporempleadosss.Designer.cs">
+      <DependentUpon>Frmreporempleadosss.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Frmreporproduc.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frmreporproduc.Designer.cs">
+      <DependentUpon>Frmreporproduc.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Frmreportapartado.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frmreportapartado.Designer.cs">
+      <DependentUpon>Frmreportapartado.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Frmreportventas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frmreportventas.Designer.cs">
+      <DependentUpon>Frmreportventas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Frmventas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frmventas.Designer.cs">
+      <DependentUpon>Frmventas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Aadmin\Frmventasadmin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Aadmin\Frmventasadmin.Designer.cs">
+      <DependentUpon>Frmventasadmin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Aadmin\Frmventasgrafica.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Aadmin\Frmventasgrafica.Designer.cs">
+      <DependentUpon>Frmventasgrafica.cs</DependentUpon>
+    </Compile>
+    <Compile Include="impres.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="reporteapartado.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>reporteapartado.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reportes\reportss.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reportes\reportss.Designer.cs">
+      <DependentUpon>reportss.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="CrystalReporempleados.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CrystalReporempleados.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="busqprod.resx">
+      <DependentUpon>busqprod.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Aadmin\Frmaddacceso.resx">
+      <DependentUpon>Frmaddacceso.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Aadmin\Frmaddclientes.resx">
+      <DependentUpon>Frmaddclientes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Aadmin\frmaddempleado.resx">
+      <DependentUpon>frmaddempleado.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Aadmin\Frmaddprod.resx">
+      <DependentUpon>Frmaddprod.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Aadmin\frmadmin.resx">
+      <DependentUpon>frmadmin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Aadmin\Frmapartado.resx">
+      <DependentUpon>Frmapartado.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="cryreportlogins.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>cryreportlogins.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CrystalReportapartado.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CrystalReportapartado.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CrystalReportclientes.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CrystalReportclientes.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CrystalReportproductos.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CrystalReportproductos.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CrystalReportventas.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CrystalReportventas.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frmapartaven.resx">
+      <DependentUpon>Frmapartaven.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Aadmin\FrmClientes.resx">
+      <DependentUpon>FrmClientes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Aadmin\Frmconfig.resx">
+      <DependentUpon>Frmconfig.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Aadmin\Frmconfigss.resx">
+      <DependentUpon>Frmconfigss.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Aadmin\FrmEmpleados.resx">
+      <DependentUpon>FrmEmpleados.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frmbusquedas.resx">
+      <DependentUpon>Frmbusquedas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frmclientevent.resx">
+      <DependentUpon>Frmclientevent.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frmcrysclientes.resx">
+      <DependentUpon>Frmcrysclientes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmInfoventa.resx">
+      <DependentUpon>frmInfoventa.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmlogin.resx">
+      <DependentUpon>frmlogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Aadmin\frmproductos.resx">
+      <DependentUpon>frmproductos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Aadmin\Frmregistrologs.resx">
+      <DependentUpon>Frmregistrologs.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Aadmin\Frmreporteslogins.resx">
+      <DependentUpon>Frmreporteslogins.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frmreporempleadosss.resx">
+      <DependentUpon>Frmreporempleadosss.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frmreporproduc.resx">
+      <DependentUpon>Frmreporproduc.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frmreportapartado.resx">
+      <DependentUpon>Frmreportapartado.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frmreportventas.resx">
+      <DependentUpon>Frmreportventas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frmventas.resx">
+      <DependentUpon>Frmventas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Aadmin\Frmventasadmin.resx">
+      <DependentUpon>Frmventasadmin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Aadmin\Frmventasgrafica.resx">
+      <DependentUpon>Frmventasgrafica.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="reporteapartado.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>reporteapartado.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\reportss.resx">
+      <DependentUpon>reportss.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="DataSetapartados.xsc">
+      <DependentUpon>DataSetapartados.xsd</DependentUpon>
+    </None>
+    <None Include="DataSetapartados.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSetapartados.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DataSetapartados.xss">
+      <DependentUpon>DataSetapartados.xsd</DependentUpon>
+    </None>
+    <None Include="DataSetclientes.xsc">
+      <DependentUpon>DataSetclientes.xsd</DependentUpon>
+    </None>
+    <None Include="DataSetclientes.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSetclientes.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DataSetclientes.xss">
+      <DependentUpon>DataSetclientes.xsd</DependentUpon>
+    </None>
+    <None Include="DataSetlogins.xsc">
+      <DependentUpon>DataSetlogins.xsd</DependentUpon>
+    </None>
+    <None Include="DataSetlogins.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSetlogins.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DataSetlogins.xss">
+      <DependentUpon>DataSetlogins.xsd</DependentUpon>
+    </None>
+    <None Include="DatasetEmpleados.xsc">
+      <DependentUpon>DatasetEmpleados.xsd</DependentUpon>
+    </None>
+    <None Include="DatasetEmpleados.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DatasetEmpleados.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DatasetEmpleados.xss">
+      <DependentUpon>DatasetEmpleados.xsd</DependentUpon>
+    </None>
+    <None Include="DataSetproduc.xsc">
+      <DependentUpon>DataSetproduc.xsd</DependentUpon>
+    </None>
+    <None Include="DataSetproduc.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSetproduc.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DataSetproduc.xss">
+      <DependentUpon>DataSetproduc.xsd</DependentUpon>
+    </None>
+    <None Include="DataSetventas.xsc">
+      <DependentUpon>DataSetventas.xsd</DependentUpon>
+    </None>
+    <None Include="DataSetventas.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSetventas.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DataSetventas.xss">
+      <DependentUpon>DataSetventas.xsd</DependentUpon>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\compras.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\desprotegido %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\desprotegido %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cliente.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\empleado.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\notas-medicas-simbolo-de-una-lista-de-papel-en-un-bloc-de-notas.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mas.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mas %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\delete_4219 %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\editinguser_edituser_useedit_4520.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\adduser_añadir_3553.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\flat-style-circle-add_icon-icons.com_66944.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\circle-edit-article_icon-icons.com_66938.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tools_settings_icon-icons.com_72405.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\accepted-notes_icon-icons.com_71535.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\boton-x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\delete_4219.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\delete_4219 %281%291.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\archivo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\periodico.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\periodico1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1490793863-user-interface23_82348.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Dataset\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\periodico2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\informe-seo.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
